@@ -33,5 +33,8 @@
   <script type="text/javascript">
     var pageHeight = document.querySelector('.main').clientHeight;
     window.parent.postMessage({ event: 'BoltIframeHeight', height: pageHeight }, "*")
+    window.onresize = function(){
+      window.parent.postMessage({ event: 'BoltIframeHeight', height: pageHeight }, "*")
+    }
   </script>
 </html>
