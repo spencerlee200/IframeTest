@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Iframe Test</title>
+    <style media="screen">
+      html, body {
+        padding: 0;
+        margin: 0;
+      }
+      .main {
+        display: inline-block;
+        background-color: blue;
+        width: 100%;
+        padding: 15px;
+      }
+      
+      .main img {
+        width: 50%;
+        height: auto;
+        display: block;
+        margin: 15px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <img src="https://www.tv80s.com/wp-content/uploads/2019/08/talking-heads-once-in-a-lifetime-official-music-video-768x423.jpg" alt="">
+      <h1>This is some test content</h1>
+      <p>Etiam ut purus mattis mauris sodales aliquam. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Etiam iaculis nunc ac metus. Nam at tortor in tellus interdum sagittis. Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis.Vestibulum dapibus nunc ac augue. Ut id nisl quis enim dignissim sagittis. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Fusce neque.Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Nunc sed turpis. Praesent vestibulum dapibus nibh. Fusce commodo aliquam arcu. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Sed fringilla mauris sit amet nibh. Praesent egestas tristique nibh. Nam eget dui. Nullam vel sem. Pellentesque posuere.Etiam ut purus mattis mauris sodales aliquam. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Etiam iaculis nunc ac metus. Nam at tortor in tellus interdum sagittis. Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Vestibulum dapibus nunc ac augue. Ut id nisl quis enim dignissim sagittis. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Fusce neque.Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Nunc sed turpis. Praesent vestibulum dapibus nibh. Fusce commodo aliquam arcu. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Sed fringilla mauris sit amet nibh. Praesent egestas tristique nibh. Nam eget dui. Nullam vel sem. Pellentesque posuere. </p>
+    </div>
+  </body>
+  <script type="text/javascript">
+    var pageHeight = document.querySelector('.main').clientHeight;
+    window.parent.postMessage({ event: 'BoltIframeHeight', height: pageHeight }, "*")
+  </script>
+</html>
